@@ -24,22 +24,22 @@
     "@babel/plugin-transform-regenerator": "^7.7.0",
     "@babel/plugin-transform-runtime": "^7.6.2",
     "@babel/preset-env": "^7.7.1",
-    "@djforth/jest-matchers": "^2.1.0",
+    "@djforth/jest-matchers": "^2.2.0",
     "@rollup/plugin-replace": "^2.2.1",
     "babel-core": "^7.0.0-bridge",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
     "babel-plugin-istanbul": "^5.2.0",
     "babel-preset-es2015-rollup": "^3.0.0",
-    "browserslist": "^4.7.2",
+    "browserslist": "^4.7.3",
     "eslint": "^6.6.0",
-    "eslint-config-prettier": "^6.5.0",
+    "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jest": "^23.0.3",
+    "eslint-plugin-jest": "^23.0.4",
     "eslint-plugin-prettier": "^3.1.1",
     "jest": "^24.9.0",
     "prettier": "^1.19.1",
-    "rollup": "^1.27.0",
+    "rollup": "^1.27.2",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
@@ -47,6 +47,8 @@
     "rollup-plugin-uglify": "^6.0.3"
   },
   "dependencies": {
+    "@djforth/utilities": "^1.0.1",
+    "core-js": "3.4.1",
     "lozad": "^1.14.0"
   }
 }

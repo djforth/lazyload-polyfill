@@ -7,21 +7,21 @@ const getPlugins = ({ env }) => {
       '@babel/plugin-transform-runtime',
       {
         helpers: false,
-        regenerator: true,
-      },
+        regenerator: true
+      }
     ],
     [
       '@babel/plugin-transform-regenerator',
       {
-        async: false,
-      },
+        async: false
+      }
     ],
     [
       '@babel/plugin-proposal-class-properties',
       {
-        loose: true,
-      },
-    ],
+        loose: true
+      }
+    ]
   ];
 
   const testPlugins = [
@@ -38,10 +38,10 @@ const getPlugins = ({ env }) => {
           '**/__mocks__ /**/*.js',
           '**/enzyme_setup.js',
           '**/setupTests.js',
-          '**/shim.js',
-        ],
-      },
-    ],
+          '**/shim.js'
+        ]
+      }
+    ]
   ];
   const devPlugins = [];
   const prodPlugins = ['lodash'];
@@ -58,13 +58,13 @@ const getPresets = ({ env }) => {
       '@babel/env',
       {
         targets: {
-          browsers: ['>0.25%', 'IE >= 11', 'not op_mini all'],
+          browsers: ['>0.25%', 'IE >= 11', 'not op_mini all']
         },
         useBuiltIns: 'usage', // or "usage"
-        corejs: 2,
-        debug: false,
-      },
-    ],
+        corejs: 3,
+        debug: false
+      }
+    ]
   ];
 
   const presets = [];
@@ -77,13 +77,13 @@ const getPresets = ({ env }) => {
       {
         modules: false,
         targets: {
-          browsers: ['>0.25%', 'IE >= 11', 'not op_mini all'],
+          browsers: ['>0.25%', 'IE >= 11', 'not op_mini all']
         },
         useBuiltIns: 'usage', // or "usage"
-        corejs: 2,
-        debug: false,
-      },
-    ],
+        corejs: 3,
+        debug: false
+      }
+    ]
   ];
 
   if (env('test')) return presets.concat(testPresets);
@@ -98,6 +98,6 @@ module.exports = function(api) {
   return {
     presets: getPresets(api),
     plugins: getPlugins(api),
-    comments: true,
+    comments: true
   };
 };
