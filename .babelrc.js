@@ -25,26 +25,26 @@ const getPlugins = ({ env }) => {
   ];
 
   const testPlugins = [
-    '@babel/transform-async-to-generator',
-    [
-      'istanbul',
-      {
-        exclude: [
-          '** /*.test.js',
-          '**/*.test.jsx',
-          '** /*.helper.js',
-          '**/*.helpers.js',
-          '**/__helpers__ /**/*.js',
-          '**/__mocks__ /**/*.js',
-          '**/enzyme_setup.js',
-          '**/setupTests.js',
-          '**/shim.js'
-        ]
-      }
-    ]
+    '@babel/transform-async-to-generator'
+    // [
+    //   'istanbul',
+    //   {
+    //     exclude: [
+    //       '** /*.test.js',
+    //       '**/*.test.jsx',
+    //       '** /*.helper.js',
+    //       '**/*.helpers.js',
+    //       '**/__helpers__ /**/*.js',
+    //       '**/__mocks__ /**/*.js',
+    //       '**/enzyme_setup.js',
+    //       '**/setupTests.js',
+    //       '**/shim.js'
+    //     ]
+    //   }
+    // ]
   ];
   const devPlugins = [];
-  const prodPlugins = ['lodash'];
+  const prodPlugins = [];
 
   if (env('test')) return plugins.concat(testPlugins);
   if (env('development')) return plugins.concat(devPlugins);
