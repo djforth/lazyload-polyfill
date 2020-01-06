@@ -1,7 +1,4 @@
-const removeAttributes = ({ src, srcset }, img) => {
-  img.removeAttribute(`data-${src}`);
-  img.removeAttribute(`data-${srcset}`);
-};
+import removeAttr from './remove_attrs';
 
 const setSrcSet = (srcSet, img) => {
   if (!img.hasAttribute(`data-${srcSet}`)) return;
@@ -15,6 +12,6 @@ export default ({ src, srcset }, remover, img) => {
   img.setAttribute('src', Src);
   img.setAttribute('loading', 'lazy');
   setSrcSet(srcset, img);
-  removeAttributes({ src, srcset }, img);
+  removeAttr([src, srcset], img);
   remover(img);
 };
