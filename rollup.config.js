@@ -4,11 +4,14 @@ import babel from 'rollup-plugin-babel';
 import replace from 'rollup-plugin-replace';
 import { uglify } from 'rollup-plugin-uglify';
 import commonjs from 'rollup-plugin-commonjs';
+import analyze from 'rollup-plugin-analyzer';
+import autoExternal from 'rollup-plugin-auto-external';
 
 export default {
   input: 'src/index.js',
 
   plugins: [
+    autoExternal(),
     resolve({
       mainFields: ['module', 'main', 'jsnext:main'],
       browser: true,
@@ -33,19 +36,18 @@ export default {
       ENVIRONMENT: JSON.stringify(process.env.NODE_ENV),
     }),
     uglify(),
+    analyze(),
   ],
-  external: ['@djforth/viewport-detection-fp', 'lodash/isEmpty'],
+  // external: id => id.includes('core-js'),
 
   output: {
-    name: 'VanillaCarousel',
+    name: 'LazyloadPolyfill',
     sourcemap: true,
     file: 'index.js',
     format: 'umd',
     globals: {
       // map 'some-npm-package' to 'SomeNPMPackage' global variable
-      lodash: '_',
-      'lodash/isEmpty': 'isEmpty',
-      '@djforth/viewport-detection-fp': 'ViewportDetect',
+      '@djforth/utilities': 'DJForthUtilities',
     },
   },
 };

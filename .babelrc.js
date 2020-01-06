@@ -60,9 +60,10 @@ const getPresets = ({ env }) => {
         targets: {
           browsers: ['>0.25%', 'IE >= 11', 'not op_mini all']
         },
-        useBuiltIns: 'usage', // or "usage"
+        useBuiltIns: 'entry', // or "usage"
         corejs: 3,
-        debug: false
+        debug: false,
+        modules: false
       }
     ]
   ];
@@ -79,9 +80,10 @@ const getPresets = ({ env }) => {
         targets: {
           browsers: ['>0.25%', 'IE >= 11', 'not op_mini all']
         },
-        useBuiltIns: 'usage', // or "usage"
+        useBuiltIns: 'entry', // or "usage"
         corejs: 3,
-        debug: false
+        debug: false,
+        modules: false
       }
     ]
   ];
