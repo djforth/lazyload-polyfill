@@ -1,4 +1,4 @@
-# lazyload-polyfil;
+# lazyload-polyfill
 
 A Lazyload polyfill that converts JS lazyload to native lazyloading.
 
@@ -38,10 +38,42 @@ If you want to change the defaults to your lazyloader of choice they are set to 
 | Option   | Description                                                 | default                                  |
 | :------- | :---------------------------------------------------------- | :--------------------------------------- |
 | selector | Set the selectors for the to replace                        | 'img.lozad, iframe.lozad, picture.lozad' |
-| imgData  | Sets the data attributes used for src and srcset for images | {                                        |
+| imgData  | Sets the data attributes used for src and srcset for images | { src: 'src', srcset: 'srcset'} |
+| removeClass  | Class to remove from element | 'lozad' |
+| picData | Class to remove from element | {src: 'iesrc', alt: 'alt'} |
 
-    src: 'src',
-    srcset: 'srcset',
+# Bug reports
 
-} |
-|
+If you discover any bugs, feel free to create an issue on GitHub. Please add as much information as possible to help us fixing the possible bug. We also encourage you to help even more by forking and sending us a pull request.
+
+https://github.com/djforth/lazyload-polyfill/issues
+
+## Contribute
+
+If you'd like to contribute, lazyload-polyfill is written using babel and rollup in ES6.
+
+Please make sure any additional code should be covered in tests (Jest).
+
+If you need to run the test please use:
+
+```bash
+
+yarn test
+
+```
+
+or to rebuild the JS run:
+
+```bash
+
+yarn build
+
+```
+
+## Maintainers
+
+Adrian Stainforth (https://github.com/djforth)
+
+# License
+
+lazyload-polyfill is an open source project falling under the MIT License. By using, distributing, or contributing to this project, you accept and agree that all code within the @morsedigital/select-filter project are licensed under MIT license.
